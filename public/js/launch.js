@@ -1,5 +1,4 @@
 var launchPage = {
-//	url: 'submit.html',  // Original Theme Code changed to subscribe as action in form = to subscribe.  See App.js also.
     url: 'subscribe',
 	sent: false,
 	formBgWidth: 120
@@ -8,13 +7,13 @@ $(document).ready( function() {
 	$('#input-email').bind({
 		focus: function(){
 			$('#error').slideUp();
-			if($(this).val() == 'your@email.com') {
+			if($(this).val() == 'email address') {
 				$(this).val('');
 			}
 		},
 		blur: function() {
 			if($(this).val() == '') {
-				$(this).val('your@email.com');
+				$(this).val('email address');
 			}
 		}
 	});
@@ -24,7 +23,7 @@ $(document).ready( function() {
 		$('#error').slideUp();
 		$('#resp').html('');
 		$('#submit-email').attr('disabled', true);
-		if($('#input-email').val().match(/^\S+@\S+\.\S+$/) && launchPage.sent !== true && $('#input-email').val() != 'your@email.com' ) {
+		if($('#input-email').val().match(/^\S+@\S+\.\S+$/) && launchPage.sent !== true && $('#input-email').val() != 'email address' ) {
 			// Animate background
 			$('.fancy-form').animate({backgroundPositionX: launchPage.formBgWidth}, 2000, function() {
 	    		 $(this).css('background-position-x', '0');
@@ -32,7 +31,6 @@ $(document).ready( function() {
 	  		);
 			// POST email address
             $.post(launchPage.url, { email: $('#input-email').val() },
-//			$.post(launchPage.url, { email: $('#email').val() },
 				function(data) {
 					if(data.match(/class='success'/)){
 						$('#input-email').attr('disabled', true);
