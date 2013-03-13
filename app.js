@@ -15,13 +15,11 @@ var express = require('express')
 var app = express();
 
 
-//SETUP MAILCHIMP API - You must replace your API Key and List ID which you can find in your Mailchimp Account
 var MailChimpAPI = require('mailchimp').MailChimpAPI;
-var apiKey = '344e36a3085102616758d330b90f43ff-us5';  // Change this to your Key
-var listID = '1a8aa7f4ff';  // Change this to your List ID
+var apiKey = '344e36a3085102616758d330b90f43ff-us5';
+var listID = '1a8aa7f4ff';
 
 
-// See Mailchimp Node Module - https://github.com/gomfunkel/node-mailchimp
 try {
   var mcApi = new MailChimpAPI(apiKey, { version : '1.3', secure : false });
 } catch (error) {
@@ -46,7 +44,6 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-// REQUIRE EJS - To view html files directly
 app.engine('html', require('ejs').renderFile);
 //
 
