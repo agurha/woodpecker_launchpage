@@ -18,21 +18,91 @@
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="css/launch.css">
+        <link rel="stylesheet" href="css/style.css">
 
-        <!--[if lt IE 9]>
+
+      <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
         <![endif]-->
     </head>
-    <body>
+    <body class="external enable-fixed-header" id="welcome_index" data-controller="welcome" data-action="index">
+        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner clearfix">
+            <div class="container">
+              <a class="brand" href="/">
+                <span class="logo">
+                  <img src="/img/woodpecker.jpg" alt="woodpecker">
+                </span>
+              </a>
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                  <li>
+                    <a href="/docs">
+                     <span cl>
+                       Docs
+                     </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#tour">Tour</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="headline row-fluid">-->
+          <!--<div class="span12">-->
+            <!--<h1 id="home">Woodpecker</h1>-->
+            <!--<h3>-->
+              <!--Realtime log management and analytics-->
+            <!--</h3>-->
+          <!--<div class="actions">-->
+            <!--<section id="signup-sect">-->
+              <!--&lt;!&ndash;<p>We're all baked... Try entering a valid email address to see the animations.</p>&ndash;&gt;-->
+              <!--<p>We're all baked...               <h3><span id="day">00 days.</span> <span id="hour">00 hours.</span> <span id="min">00 minutes.</span> <span id="sec">00 seconds.</span></h3>-->
+              <!--</p>-->
+
+                <!--<form class='fancy-form' action='/subscribe' method='POST'>-->
+                  <!--<div class="controls controls-row hide-me">-->
+                    <!--<input  id="input-email" class="span5" type="text" name="email" placeholder="email address">-->
+                    <!--<button id="submit-email" class="span2 btn btn-fancy" type="submit">Sign up</button>-->
+                  <!--</div>-->
+                  <!--<div id="resp" class="center-child"></div> &lt;!&ndash; Response message &ndash;&gt;-->
+                <!--</form>-->
+
+                <!--<div class="well" id="error"></div> &lt;!&ndash; Error message &ndash;&gt;-->
+                <!--<div id="share"> &lt;!&ndash; Social &ndash;&gt;-->
+                  <!--<ul class="icons">-->
+                    <!--<li class="share-button">-->
+                      <!--<a href="https://twitter.com/getwoodpecker"><i class="icon-twitter-sign"></i></a></li>-->
+
+                  <!--</ul>-->
+                  <!--<a class='muted pull-right' href="mailto:hello@getwoodpecker.com">hello@getwoodpecker.com</a>-->
+                <!--</div>-->
+            <!--</section>-->
+          <!--</div>-->
+
+          <!--</div>-->
+
+        <!--</div>-->
         <div class="container">
+
+
             <header class="launch-head">
                 <h1>Woodpecker</h1>
                 <h2>Realtime log management and analytics</h2>
 
             </header>
 
-            <section id="signup-sect"> 
+            <section id="signup-sect">
                 <!--<p>We're all baked... Try entering a valid email address to see the animations.</p>-->
                 <p>We're all baked...               <h3><span id="day">00 days.</span> <span id="hour">00 hours.</span> <span id="min">00 minutes.</span> <span id="sec">00 seconds.</span></h3>
               </p>
@@ -42,7 +112,7 @@
                         <div class="controls controls-row hide-me">
                           <input  id="input-email" class="span5" type="text" name="email" placeholder="email address">
                           <button id="submit-email" class="span2 btn btn-fancy" type="submit">Sign up</button>
-                        </div>                        
+                        </div>
                         <div id="resp" class="center-child"></div> <!-- Response message -->
                     </form>
 
@@ -52,40 +122,98 @@
                             <li class="share-button">
                                 <a href="https://twitter.com/getwoodpecker"><i class="icon-twitter-sign"></i></a></li>
 
-                        </ul>                        
+                        </ul>
                         <a class='muted pull-right' href="mailto:hello@getwoodpecker.com">hello@getwoodpecker.com</a>
                     </div>
                 </div>
             </section>
 
-            <section id="info" class="row">
-                <div class="span4">
-                    <h3>Aggregate and Warehouse</h3>
-                    <p>We Aggrate all your log data whether its network, syslogs or custom application logs</p>
-                    <ol>
-                      <li>
-                        Local or Remote logs
-                      </li>
-                      <li>
-                        Network or syslogs
-                      </li>
-                    </ol>
-                </div>
-                <div class="span4">
-                    <h3>Search and Diagnose</h3>
-                    <p>Index all of your machine data in real time and run simple , advanced or boolean searches across entire log set.</p>
-               </div>
-                <div class="span4">
-                    <h3>Streaming Hadoop Analysis</h3>
-                    <p>Woodpecker runs streaming hadoop analysis with advanced machine learning techniques to provide you with highly meaningful insights into your application events and errors</p>
-                </div>
-            </section>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
 
-            <footer id="pagefooter">
-                <p class="pull-right">© getwoodpecker</p>
-            </footer>
-        </div> <!-- /container -->
+        </div>
 
+
+
+        <div class="screenshots row-fluid">
+          <div class="container">
+            <div class="image-container span12">
+              <img class="image image-main" src='/img/engg.png'>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container row-fluid">
+          <div class="container">
+            <div class="row">
+              <div class="span4">
+                <h3>Gather and Aggregate</h3>
+                <p>We Aggrate all your log data whether its network, syslogs or custom application logs</p>
+
+              </div>
+              <div class="span4">
+                <h3>Streaming Hadoop Analysis</h3>
+                <p>Woodpecker runs streaming hadoop analysis with advanced machine learning techniques to provide you with highly meaningful insights into your application events and errors</p>
+              </div>
+              <div class="span4">
+                <h3>Search and Diagnose</h3>
+                <p>Index all of your machine data in real time and run simple , advanced or boolean searches across entire log set.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="features container">
+
+          <div class="row">
+            <div class="span12">
+              <h1 id="tour">
+                Features
+              </h1>
+            </div>
+          </div>
+
+          <!--<div>-->
+            <!--<section id="info" class="row">-->
+              <!--<div class="span4">-->
+                <!--<h3>Gather and </h3>-->
+                <!--<p>We Aggrate all your log data whether its network, syslogs or custom application logs</p>-->
+                <!--<ol>-->
+                  <!--<li>-->
+                    <!--Local or Remote logs-->
+                  <!--</li>-->
+                  <!--<li>-->
+                    <!--Network or syslogs-->
+                  <!--</li>-->
+                <!--</ol>-->
+              <!--</div>-->
+              <!--<div class="span4">-->
+                <!--<h3>Search and Diagnose</h3>-->
+                <!--<p>Index all of your machine data in real time and run simple , advanced or boolean searches across entire log set.</p>-->
+              <!--</div>-->
+              <!--<div class="span4">-->
+                <!--<h3>Streaming Hadoop Analysis</h3>-->
+                <!--<p>Woodpecker runs streaming hadoop analysis with advanced machine learning techniques to provide you with highly meaningful insights into your application events and errors</p>-->
+              <!--</div>-->
+            <!--</section>-->
+
+          <!--</div>-->
+        </div>
+
+        <div class="container-fluid">
+          <div class="span4 offset2">
+          <footer id="pagefooter">
+            <p class="pull-right">© Hand crafted in London by Woodpeker</p>
+          </footer>
+          </div>
+        </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
 

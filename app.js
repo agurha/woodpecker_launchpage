@@ -54,6 +54,12 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/docs', function(req,res){
+  res.render('docs.html', {
+    pageName: 'Docs'
+  })
+})
+
 //app.get('/', routes.index);
 //app.get('/users', user.list);
 
