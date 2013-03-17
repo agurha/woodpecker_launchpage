@@ -1,214 +1,222 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="css/launch.css">
-        <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/launch.css">
+  <link rel="stylesheet" href="css/style.css">
 
 
-      <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
-        <![endif]-->
-    </head>
-    <body class="external enable-fixed-header" id="welcome_index" data-controller="welcome" data-action="index">
-        <div class="navbar navbar-fixed-top">
-          <div class="navbar-inner clearfix">
-            <div class="container">
-              <a class="brand" href="/">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
+  <![endif]-->
+</head>
+<body class="external enable-fixed-header" id="welcome_index" data-controller="welcome" data-action="index">
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <div class="container">
+      <a class="brand" href="/">
                 <span class="logo">
                   <!--<img src="/img/woodpecker.gif" alt="woodpecker">-->
                 </span>
-              </a>
-              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </a>
-              <div class="nav-collapse collapse">
-                <ul class="nav pull-right">
-                  <!--<li>-->
-                    <!--<a href="/docs">-->
-                     <!--<span cl>-->
-                       <!--Docs-->
-                     <!--</span>-->
-                    <!--</a>-->
-                  <!--</li>-->
-                  <li>
-                    <a href="/#tour">Tour</a>
-                  </li>
+      </a>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
 
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="nav-collapse collapse">
+        <ul class="nav pull-right">
+
+          <li>
+            <a href="/#tour">Tour</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+
+  <header class="launch-head">
+    <h1>Woodpecker</h1>
+
+    <h2>Realtime log management and analytics</h2>
+
+  </header>
+
+  <section id="signup-sect">
+    <p>We're almost baked...
+
+    <h3><span id="day">00 days.</span> <span id="hour">00 hours.</span> <span id="min">00 minutes.</span> <span
+      id="sec">00 seconds.</span></h3>
+    </p>
+    <div class="flex-container">
+
+      <form class='fancy-form' action='/subscribe' method='POST'>
+        <div class="controls controls-row hide-me">
+          <input id="input-email" class="span5" type="text" name="email" placeholder="email address">
+          <button id="submit-email" class="span2 btn btn-fancy" type="submit">Sign up</button>
         </div>
+        <div id="resp" class="center-child"></div>
+        <!-- Response message -->
+      </form>
 
-        <div class="container">
+      <div class="well" id="error"></div>
+      <!-- Error message -->
+      <div id="share"> <!-- Social -->
+        <ul class="icons">
+          <li class="share-button">
+            <a href="https://twitter.com/getwoodpecker"><i class="icon-twitter-sign"></i></a></li>
 
+        </ul>
+        <a class='muted pull-right' href="mailto:hello@getwoodpecker.com">hello@getwoodpecker.com</a>
+      </div>
+    </div>
+  </section>
 
-            <header class="launch-head">
-                <h1>Woodpecker</h1>
-                <h2>Realtime log management and analytics</h2>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-            </header>
-
-            <section id="signup-sect">
-                <!--<p>We're all baked... Try entering a valid email address to see the animations.</p>-->
-                <p>We're almost baked...               <h3><span id="day">00 days.</span> <span id="hour">00 hours.</span> <span id="min">00 minutes.</span> <span id="sec">00 seconds.</span></h3>
-              </p>
-                <div class="flex-container">
-
-                    <form class='fancy-form' action='/subscribe' method='POST'>
-                        <div class="controls controls-row hide-me">
-                          <input  id="input-email" class="span5" type="text" name="email" placeholder="email address">
-                          <button id="submit-email" class="span2 btn btn-fancy" type="submit">Sign up</button>
-                        </div>
-                        <div id="resp" class="center-child"></div> <!-- Response message -->
-                    </form>
-
-                    <div class="well" id="error"></div> <!-- Error message -->
-                    <div id="share"> <!-- Social -->
-                        <ul class="icons">
-                            <li class="share-button">
-                                <a href="https://twitter.com/getwoodpecker"><i class="icon-twitter-sign"></i></a></li>
-
-                        </ul>
-                        <a class='muted pull-right' href="mailto:hello@getwoodpecker.com">hello@getwoodpecker.com</a>
-                    </div>
-                </div>
-            </section>
-
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-
-        </div>
+</div>
 
 
+<div class="screenshots row-fluid">
+  <div class="container">
+    <div class="image-container span12">
+      <img class="image image-main" src='/img/engg.png'>
+    </div>
+  </div>
 
-        <div class="screenshots row-fluid">
-          <div class="container">
-            <div class="image-container span12">
-              <img class="image image-main" src='/img/engg.png'>
-            </div>
-          </div>
+</div>
 
-        </div>
+<div class="container row-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="span4">
+        <h3>Gather and Aggregate</h3>
 
-        <div class="container row-fluid">
-          <div class="container">
-            <div class="row">
-              <div class="span4">
-                <h3>Gather and Aggregate</h3>
-                <p>We Aggregate all your log data whether its network, syslogs or custom application logs</p>
+        <p>We Aggregate all your log data whether its network, syslogs or custom application logs</p>
 
-              </div>
-              <div class="span4">
-                <h3>Streaming Hadoop Analysis</h3>
-                <p>Woodpecker runs streaming hadoop analysis with advanced machine learning techniques to provide you with highly meaningful insights into your application events and errors</p>
-              </div>
-              <div class="span4">
-                <h3>Search and Diagnose</h3>
-                <p>Index all of your machine data in real time and run simple , advanced or boolean searches across entire log set.</p>
-              </div>
+      </div>
+      <div class="span4">
+        <h3>Streaming Hadoop Analysis</h3>
 
-            </div>
-          </div>
-        </div>
+        <p>Woodpecker runs streaming hadoop analysis with advanced machine learning techniques to provide you with
+          highly meaningful insights into your application events and errors</p>
+      </div>
+      <div class="span4">
+        <h3>Search and Diagnose</h3>
 
+        <p>Index all of your machine data in real time and run simple , advanced or boolean searches across entire log
+          set.</p>
+      </div>
 
-        <div class="features container">
-
-          <div class="row">
-            <div class="span12">
-              <h1 id="tour">
-                Features
-              </h1>
-            </div>
-          </div>
-
-          <div class="import-from-web row">
-            <div class="description span6 offset1">
-              <h3>Realtime Error and Event Updates</h3>
-              <p>
-                Commision your team to be notified in realtime when something goes wrong in your application.
-                Interact with your users before they have a chance to report problems.
-              </p>
-            </div>
-            <div class="span4">
-              <div class="bordered designers">
-
-                <img alt="Realtime" height=400 src="/img/realtime.jpeg">
-              </div>
-            </div>
-          </div>
+    </div>
+  </div>
+</div>
 
 
-          <div class="clickable-prototypes row">
-            <div class="span4 offset1">
-              <div class="bordered product-managers">
-                <img height="400" src='/img/genericmean.gif'>
-              </div>
-            </div>
-            <div class="description span6">
-              <h3>
-                Aggregated Error Reporting
-              </h3>
-              <p>
-                Aggregated error reporting coupled with advanced machine learning techniques enables us to provide you
-                deep insights into your application and empowers your team with the information as which errors to spend more time on and which
-                are less critical issues.
-              </p>
-            </div>
-          </div>
+<div class="features container">
 
-          <div class="import-from-web row">
-            <div class="description span6 offset1">
-              <h3>Intergration API</h3>
-              <p>
-                Our extremely simple to use API will get you started in under 5 minutes. We really value developers time and
-                understand the frustration of other developers when it comes to integrate 3rd party services, we have taken extra care to make your experience a breeze.
-              </p>
-            </div>
-            <div class="span4">
-              <div class="bordered designers">
+  <div class="row">
+    <div class="span12">
+      <h1 id="tour">
+        Features
+      </h1>
+    </div>
+  </div>
 
-                <img alt="Realtime" height=400 src="/img/api2_copy.png">
-              </div>
-            </div>
-          </div>
+  <div class="feature1 row">
+    <div class="description span6 offset1">
+      <h3>Realtime Error and Event Updates</h3>
+
+      <p>
+        Commision your team to be notified in realtime when something goes wrong in your application.
+        Interact with your users before they have a chance to report problems.
+      </p>
+    </div>
+    <div class="span4">
+      <div class="bordered designers">
+
+        <img alt="Realtime" height=400 src="/img/realtime.jpeg">
+      </div>
+    </div>
+  </div>
 
 
+  <div class="feature2 row">
+    <div class="span4 offset1">
+      <div class="bordered product-managers">
+        <img height="400" src='/img/genericmean.gif'>
+      </div>
+    </div>
+    <div class="description span6">
+      <h3>
+        Aggregated Error Reporting
+      </h3>
 
-        </div>
+      <p>
+        Aggregated error reporting coupled with advanced machine learning techniques enables us to provide you
+        deep insights into your application and empowers your team with the information as which errors to spend more
+        time on and which
+        are less critical issues.
+      </p>
+    </div>
+  </div>
 
-        <div>
+  <div class="feature1 row">
+    <div class="description span6 offset1">
+      <h3>Intergration API</h3>
 
-          <br>
-          <br>
-          <br>
-        </div>
+      <p>
+        Our extremely simple to use API will get you started in under 5 minutes. We really value developers time and
+        understand the frustration of other developers when it comes to integrate 3rd party services, we have taken
+        extra care to make your experience a breeze.
+      </p>
+    </div>
+    <div class="span4">
+      <div class="bordered designers">
 
-        <div class="footer row-fluid">
+        <img alt="Realtime" height=400 src="/img/api2_copy.png">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div>
+
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="footer row-fluid">
           <span class="span12">
             <a class="mixpanel">
 
@@ -221,27 +229,18 @@
                 <a href="http://blog.getwoodpecker.com">Blog</a>
               </li>
               <li>
-                <a href="mailto:support@getwoodpecker.com">Contact</a>
+                <a href="mailto:hello@getwoodpecker.com">Contact</a>
               </li>
 
             </ul>
           </span>
-        </div>
+</div>
 
-        <!--<div class="container-fluid">-->
-          <!--<div class="span4 offset2">-->
-          <!--<footer id="pagefooter">-->
-            <!--<p class="pull-right">© Hand crafted in London by Woodpeker</p>-->
-          <!--</footer>-->
-          <!--</div>-->
-        <!--</div>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
 
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
-
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/launch.js"></script>
-        <script src="js/countdown.js"></script>
-    </body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/launch.js"></script>
+<script src="js/countdown.js"></script>
+</body>
 </html>

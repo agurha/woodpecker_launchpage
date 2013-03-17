@@ -356,9 +356,9 @@ body#welcome_index .features .product-managers {
 body#welcome_index .features .developers {
     color: #80e8cc;
 }
-body#welcome_index .features .import-from-web .description, body#welcome_index .features .clickable-prototypes .description, body#welcome_index .features .export-to-html .description {
+body#welcome_index .features .feature1 .description, body#welcome_index .features .clickable-prototypes .description, body#welcome_index .features .export-to-html .description {
     margin-top: 5%}
-body#welcome_index .features .clickable-prototypes .description, body#welcome_index .features .export-to-html .description {
+body#welcome_index .features .feature2 .description, body#welcome_index .features .export-to-html .description {
     text-align: right;
 }
 body#welcome_index .features .smaller .bordered {
