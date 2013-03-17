@@ -75,7 +75,7 @@ app.post('/subscribe', function(req, res){
     }
     else {
       console.log(data);
-      res.send("<p class='success'>Thanks for signing up!</p>");
+      res.send("<p class='success'>Thanks! We will notify you when Beta is available.</p>");
     }
   })
 });
