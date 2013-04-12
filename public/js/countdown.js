@@ -12,9 +12,9 @@ var Woodpecker = {
     $("#sec,#min,#hour,#day").bind("animationEnd webkitAnimationEnd", function () {
       $(this).css("animation", "none").css("webkitAnimation", "none")
     });
-    countDown(2013, 4, 10);
+    countDown(2013, 4, 28);
     setInterval(function () {
-      countDown(2013, 4, 10)
+      countDown(2013, 4, 28)
     }, 1e3)
   }
 };
